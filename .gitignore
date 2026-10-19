@@ -1,0 +1,4 @@
+plugins/studio/shared/private.local.md
+.studio-proof/
+node_modules/
+.DS_Store

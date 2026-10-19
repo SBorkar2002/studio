@@ -1,0 +1,32 @@
+# Studio
+
+Sejal's personal Claude Code plugin. Type `/studio` in any chat with a change list; it works out which chat it is in and runs the right skill.
+
+```
+/studio  (router: reads the chat, plans, routes, reports)
+  ├─ code-doctor    web code: reproduce, diagnose, fix, screenshot proof, preview then ship
+  ├─ figma-doctor   Figma: keep the original safe, fix in batches, QA script, before/after
+  └─ flow-doctor    automation: dry run first, hard safety limits, plain-language flow
+shared/   house-rules · verify · truth · taste · handoff · private.local (git-ignored)
+scripts/  detect.sh · shots.mjs · copy-lint.py · figma-qa.js
+hooks/    block force-push and old-portfolio edits, flag em dashes as they are written
+```
+
+Any doctor can call another (`studio:figma-doctor`, `studio:code-doctor`, `studio:flow-doctor`) or hand an item to another chat (see `shared/handoff.md`).
+
+## Install
+
+```bash
+claude plugin marketplace add SBorkar2002/studio
+claude plugin install studio@sejal-studio
+```
+
+For local development, use the folder path instead of `SBorkar2002/studio`. After editing, run `claude plugin marketplace update sejal-studio` and `claude plugin update studio@sejal-studio`, then start a new chat.
+
+`shared/private.local.md` is git-ignored: copy it to a new machine by hand.
+
+## Needs
+
+- Playwright for `shots.mjs`: `npm install -g @playwright/cli@latest`
+- Python 3 for `copy-lint.py` and the hooks
+- Figma MCP signed in for figma-doctor
