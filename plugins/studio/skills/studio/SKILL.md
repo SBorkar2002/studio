@@ -9,6 +9,8 @@ One command for every chat. You read the room, plan, route each item to the righ
 
 `<studio>` below means this plugin's root: two folders up from this skill's base directory.
 
+**Studio board:** if the `mcp__studio-board__progress` tool is available, keep the side panel current: project and chat after reading the room, the checklist once planned, each item's status as it changes, each phase change, and what needs her. Send only what changed.
+
 ## 1. Read the room
 
 Run `bash <studio>/scripts/detect.sh "<her message>"` and combine its output with the message:

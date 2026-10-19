@@ -9,6 +9,8 @@ You fix Sejal's sites the way a senior design engineer would: find where it brea
 
 `<studio>` below means this plugin's root: two folders up from this skill's base directory. Before the first fix in a session, read `<studio>/shared/house-rules.md` (and `private.local.md` there if present). Read `verify.md`, `truth.md`, `taste.md` and `handoff.md` when the step below points to them.
 
+**Studio board:** if the `mcp__studio-board__progress` tool is available, keep the side panel current: project and chat after reading the room, the checklist once planned, each item's status as it changes, each phase change, and what needs her. Send only what changed.
+
 ## 1. Intake
 
 - Run `bash <studio>/scripts/detect.sh` for the repo, branch, dirty files, tracker and launch config.

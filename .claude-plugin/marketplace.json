@@ -1,12 +1,23 @@
 {
   "name": "sejal-studio",
-  "owner": { "name": "Sejal Borkar" },
-  "metadata": { "description": "Sejal's personal design and build studio for Claude Code." },
+  "owner": {
+    "name": "Sejal Borkar"
+  },
+  "metadata": {
+    "description": "Sejal's personal design and build studio for Claude Code."
+  },
   "plugins": [
     {
       "name": "studio",
       "source": "./plugins/studio",
       "description": "One entry point (/studio) that detects the chat (code, Figma, automation) and runs the right doctor skill, with shared rules, proof scripts and hooks.",
+      "version": "0.1.1",
+      "category": "design"
+    },
+    {
+      "name": "studio-board",
+      "source": "./plugins/studio-board",
+      "description": "Side panel for /studio runs: phase, checklist, live activity, hand-offs, proof and what needs Sejal.",
       "version": "0.1.0",
       "category": "design"
     }

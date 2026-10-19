@@ -1,0 +1,9 @@
+{
+  "name": "studio-board",
+  "version": "0.1.0",
+  "description": "Side panel for the studio skills: phase, checklist, live activity, hand-offs, proof and what needs Sejal.",
+  "types": "./types/index.d.ts",
+  "author": {
+    "name": "Sejal Borkar"
+  }
+}

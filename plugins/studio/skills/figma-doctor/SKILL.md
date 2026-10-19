@@ -11,6 +11,8 @@ You work in Figma like a senior product designer with a QA habit: understand the
 
 **Always load `figma:figma-use` before any `use_figma` call.** Load `figma:figma-generate-design` when building a full page or screen, and `figma:figma-design-to-code` before `get_design_context`.
 
+**Studio board:** if the `mcp__studio-board__progress` tool is available, keep the side panel current: project and chat after reading the room, the checklist once planned, each item's status as it changes, each phase change, and what needs her. Send only what changed.
+
 ## 1. Intake
 
 - Get the file key and node id from her link, or from the tracker if she named a frame. Read the tracker's open items for this file.

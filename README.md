@@ -12,6 +12,8 @@ scripts/  detect.sh · shots.mjs · copy-lint.py · figma-qa.js
 hooks/    block force-push and old-portfolio edits, flag em dashes as they are written
 ```
 
+`studio-board` is a separate mod in the same marketplace: a side panel that opens when any studio skill starts and shows the phase (Read, Plan, Route, Fix, Verify, Ship, Report), the checklist with status per item, what Claude is doing right now, hand-offs, links, proof, what needs Sejal, and a short log. The skills keep it current through the `mcp__studio-board__progress` tool. `/studio-board` reopens it, `/studio-board-reset` clears it.
+
 Any doctor can call another (`studio:figma-doctor`, `studio:code-doctor`, `studio:flow-doctor`) or hand an item to another chat (see `shared/handoff.md`).
 
 ## Install
@@ -19,6 +21,7 @@ Any doctor can call another (`studio:figma-doctor`, `studio:code-doctor`, `studi
 ```bash
 claude plugin marketplace add SBorkar2002/studio
 claude plugin install studio@sejal-studio
+claude plugin install studio-board@sejal-studio
 ```
 
 For local development, use the folder path instead of `SBorkar2002/studio`. After editing, run `claude plugin marketplace update sejal-studio` and `claude plugin update studio@sejal-studio`, then start a new chat.
