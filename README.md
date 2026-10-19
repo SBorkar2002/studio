@@ -14,6 +14,8 @@ hooks/    block force-push and old-portfolio edits, flag em dashes as they are w
 
 `studio-board` is a separate mod in the same marketplace: a side panel that opens when any studio skill starts and shows the phase (Read, Plan, Route, Fix, Verify, Ship, Report), the checklist with status per item, what Claude is doing right now, hand-offs, links, proof, what needs Sejal, and a short log. The skills keep it current through the `mcp__studio-board__progress` tool. `/studio-board` reopens it, `/studio-board-reset` clears it.
 
+**Studio mode:** once any studio skill runs in a chat, every later message in that chat is treated as a studio request, so the command is typed once per chat. It survives an app restart. `/studio-off` turns it off, `/studio-on` turns it back on, and the panel has the same switch.
+
 Any doctor can call another (`studio:figma-doctor`, `studio:code-doctor`, `studio:flow-doctor`) or hand an item to another chat (see `shared/handoff.md`).
 
 ## Install

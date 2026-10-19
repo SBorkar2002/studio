@@ -39,8 +39,11 @@ export type Board = {
 export type Activity = { tool: string; detail: string; at: number; calls: number; isIdle: boolean }
 export type LogEntry = { at: number; text: string }
 
+/** Studio mode: once a studio skill runs in a chat, every later message in that chat is a studio request until turned off. */
+export type Mode = { isOn: boolean; skill: string; since: number; messages: number }
+
 declare module 'claude-code' {
   interface PluginState {
-    'studio-board': { board: Board; activity: Activity; log: LogEntry[] }
+    'studio-board': { board: Board; activity: Activity; log: LogEntry[]; mode: Mode }
   }
 }

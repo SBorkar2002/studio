@@ -1,7 +1,7 @@
 {
   "name": "studio-board",
-  "version": "0.1.0",
-  "description": "Side panel for the studio skills: phase, checklist, live activity, hand-offs, proof and what needs Sejal.",
+  "version": "0.2.0",
+  "description": "Side panel for studio runs plus sticky studio mode: once a studio skill runs in a chat, later messages keep running through it.",
   "types": "./types/index.d.ts",
   "author": {
     "name": "Sejal Borkar"
