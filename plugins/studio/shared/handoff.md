@@ -27,6 +27,17 @@ The three doctors are one team. Any of them can pull in another when the problem
   Then note the hand-off in the tracker so nothing is lost if a message goes unread.
 - **Parallel helpers:** independent read-only work (research, audits, screenshots) can go to subagents on a cheaper model. Give each its own scratch folder and a short report format. Never let two helpers write the same files.
 
+## Asset drops
+
+When another chat delivers files this chat consumes (the cat chat's `frames.json`, exported images), do the whole import without asking her:
+
+| Asset | From | Import | Then |
+|---|---|---|---|
+| Cat sprites | Cat studio: `~/Documents/career/portfolio-pixel/cat-v2/preview/frames.json` | `node scripts/export-cat-frames.mjs` in the portfolio repo; add any new state names or colour keys the message lists | Phone sweep, push to the preview branch, reply to the cat chat with the preview link |
+| Other files | The chat that owns them | Copy to the path the message names; optimise images with `scripts/optimise-images.mjs` | Same |
+
+Reply to the sending chat when done, and log it in the tracker. If the drop needs a decision only she can make (a new spot for the cat, a colour not in the tokens), ask her one question and do the rest.
+
 ## Skill feedback
 
 Problems with the skills themselves (a missing rule, a step that wasted time, a wrong route) are not hand-offs. Log them with `scripts/feedback.sh` (see `house-rules.md`). The Studio skills workshop chat owns the skills.

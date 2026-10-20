@@ -3,8 +3,12 @@
 // when the in-app browser pane is hidden.
 //
 //   node shots.mjs --url http://localhost:3410/ [--widths 1440,390] [--themes light,dark]
-//                  [--full] [--at "#work@0.5,#art@0"] [--frames 6 --interval 150]
-//                  [--wait 1200] [--theme-key theme] [--out .studio-proof]
+//                  [--paths /,/work/a] [--tag before] [--full] [--at "#work@0.5,#art@0"]
+//                  [--frames 6 --interval 150] [--wait 1200] [--theme-key theme] [--out .studio-proof]
+//
+// --paths    shoot several pages of the same site (url is the base).
+// --tag      file name prefix instead of the time stamp, so shotdiff.mjs can pair files.
+// --still    reduced motion on and CSS animations paused, for before/after comparisons.
 //
 // --at       scroll beats: "<selector>@<0..1>" scrolls so that fraction of the
 //            element has passed the top of the viewport, then shoots.
@@ -52,7 +56,9 @@ const interval = Number(args.interval || 150);
 const wait = Number(args.wait || 1200);
 const themeKey = args["theme-key"] || "theme";
 const out = resolve(args.out || ".studio-proof");
-const stamp = new Date().toISOString().slice(0, 19).replace(/[:T]/g, "-");
+const stamp = args.tag || new Date().toISOString().slice(0, 19).replace(/[:T]/g, "-");
+const pages = args.paths ? args.paths.split(",").map((p) => args.url.replace(/\/$/, "") + p) : [args.url];
+const slug = (u) => (args.paths ? "_" + (new URL(u).pathname.replace(/\W+/g, "-").replace(/^-|-$/g, "") || "home") : "");
 mkdirSync(out, { recursive: true });
 
 const { chromium } = loadPlaywright();
@@ -63,6 +69,7 @@ const browser = await chromium.launch({ channel: "chrome" }).catch(() => chromiu
 });
 const errors = [];
 
+for (const url of pages) {
 for (const width of widths) {
   for (const theme of themes) {
     const ctx = await browser.newContext({
@@ -71,6 +78,7 @@ for (const width of widths) {
       colorScheme: theme === "dark" ? "dark" : "light",
       isMobile: width < 768,
       hasTouch: width < 768,
+      reducedMotion: args.still === "true" ? "reduce" : "no-preference",
     });
     await ctx.addInitScript(([k, v]) => {
       try { localStorage.setItem(k, v); } catch {}
@@ -78,8 +86,11 @@ for (const width of widths) {
     const page = await ctx.newPage();
     page.on("pageerror", (e) => errors.push(`${width}/${theme}: ${e.message}`));
     page.on("console", (m) => m.type() === "error" && errors.push(`${width}/${theme}: ${m.text()}`));
-    await page.goto(args.url, { waitUntil: "networkidle" }).catch((e) => errors.push(`goto: ${e.message}`));
+    await page.goto(url, { waitUntil: "networkidle" }).catch((e) => errors.push(`goto: ${e.message}`));
     await page.waitForTimeout(wait);
+    if (args.still === "true") {
+      await page.addStyleTag({ content: "*,*::before,*::after{animation-play-state:paused!important;transition:none!important;caret-color:transparent!important}" }).catch(() => undefined);
+    }
 
     for (const beat of beats) {
       let tag = "top";
@@ -97,7 +108,7 @@ for (const width of widths) {
         await page.waitForTimeout(600);
       }
       for (let f = 0; f < frames; f++) {
-        const name = `${stamp}_${width}_${theme}_${tag}${frames > 1 ? `_f${f}` : ""}.png`;
+        const name = `${stamp}${slug(url)}_${width}_${theme}_${tag}${frames > 1 ? `_f${f}` : ""}.png`;
         await page.screenshot({ path: join(out, name), fullPage: args.full === "true" && !beat && frames === 1 });
         console.log(join(out, name));
         if (f < frames - 1) await page.waitForTimeout(interval);
@@ -105,6 +116,7 @@ for (const width of widths) {
     }
     await ctx.close();
   }
+}
 }
 await browser.close();
 if (errors.length) {

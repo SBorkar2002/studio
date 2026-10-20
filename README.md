@@ -8,7 +8,7 @@ Sejal's personal Claude Code plugin. Type `/studio` in any chat with a change li
   ├─ figma-doctor   Figma: keep the original safe, fix in batches, QA script, before/after
   └─ flow-doctor    automation: dry run first, hard safety limits, plain-language flow
 shared/   house-rules · verify · truth · taste · handoff · private.local (git-ignored)
-scripts/  detect.sh · shots.mjs · copy-lint.py · figma-qa.js · feedback.sh
+scripts/  detect.sh · shots.mjs · sweep.mjs · shotdiff.mjs · copy-lint.py · figma-qa.js · feedback.sh
 hooks/    block force-push and old-portfolio edits, flag em dashes as they are written
 ```
 

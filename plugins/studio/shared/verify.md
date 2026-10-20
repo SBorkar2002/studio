@@ -11,8 +11,9 @@ A change is done only when there is proof she can look at. Collect it, send it, 
    ```
    For motion, add `--frames 6 --interval 150` or capture scroll beats with `--at "#work@0.5"`.
 3. Copy lint on the diff: `python3 "<studio>/scripts/copy-lint.py" --diff`.
-4. Look at every screenshot yourself before sending. Check: overlap, overflow, cut text, repeated images, both themes, 390 px layout.
-5. Send the key screenshots with SendUserFile. Name what each one proves.
+4. Phones: run `scripts/sweep.mjs` on rounds that touched layout, motion or floating elements (see code-doctor `mobile.md`). Pages nobody asked to change: compare before/after with `shots.mjs --still --tag` and `scripts/shotdiff.mjs` (code-doctor `ship.md`).
+5. Look at every screenshot yourself before sending. Check: overlap, overflow, cut text, repeated images, both themes, 390 px layout.
+6. Send the key screenshots with SendUserFile. Name what each one proves.
 
 ## Figma
 

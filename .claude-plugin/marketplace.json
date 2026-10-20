@@ -11,7 +11,7 @@
       "name": "studio",
       "source": "./plugins/studio",
       "description": "One entry point (/studio) that detects the chat (code, Figma, automation) and runs the right doctor skill, with shared rules, proof scripts and hooks.",
-      "version": "0.1.4",
+      "version": "0.1.5",
       "category": "design"
     },
     {
