@@ -14,7 +14,7 @@ The three doctors are one team. Any of them can pull in another when the problem
 ## How to call one
 
 - **Same chat, small piece:** invoke the other skill with the Skill tool (for example `studio:figma-doctor`). Pass the item, the file or node, and what "done" looks like. When it finishes, come back and continue your own checklist.
-- **Belongs to another chat** (the dedicated code, Figma, cat or automation chat): do not do it here. Send it to that chat with SendMessage, using the chat id listed in the project tracker's "Chats" section. Write the note so it stands alone:
+- **Belongs to another chat** (the dedicated code, Figma, cat or automation chat): do not do it here. Send it to that chat with SendMessage, using the session id in the project tracker's chat table ("Who does what" or "Chats"). Write the note so it stands alone:
 
   ```
   From <this chat> · <date>
@@ -26,6 +26,10 @@ The three doctors are one team. Any of them can pull in another when the problem
 
   Then note the hand-off in the tracker so nothing is lost if a message goes unread.
 - **Parallel helpers:** independent read-only work (research, audits, screenshots) can go to subagents on a cheaper model. Give each its own scratch folder and a short report format. Never let two helpers write the same files.
+
+## Skill feedback
+
+Problems with the skills themselves (a missing rule, a step that wasted time, a wrong route) are not hand-offs. Log them with `scripts/feedback.sh` (see `house-rules.md`). The Studio skills workshop chat owns the skills.
 
 ## Rules
 

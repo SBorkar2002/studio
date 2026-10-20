@@ -23,7 +23,7 @@ Run `bash <studio>/scripts/detect.sh "<her message>"` and combine its output wit
 | Mixed | Split by item (step 2) |
 | No signal | Ask one question: which project and where it lives |
 
-Also read the tracker it found (TIMELINE.md or the README status). Its "Chats" section says which chat owns what. If an item belongs to a different chat (for example cat art, or Figma work while you are in the code chat), it is handed off, not done here.
+Also read the tracker it found (TIMELINE.md or the README status). Its chat table ("Who does what" or "Chats") says which chat owns what, with session ids. If an item belongs to a different chat (for example cat art, or Figma work while you are in the code chat), it is handed off, not done here.
 
 ## 2. Plan
 

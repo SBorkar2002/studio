@@ -14,6 +14,7 @@ Also read `private.local.md` in this folder if it exists. It holds confidential 
 - **Tokens are budgeted.** When she gives a budget or says "conserve", estimate each item, do only what fits, and list the rest as deferred.
 - **One tracker.** Update the project's tracker (TIMELINE.md or the README status section). Do not create new status files.
 - **Never claim done without proof.** See `verify.md`. "I could not watch it" is a defect to fix, not a footnote.
+- **Feed the skills.** When she corrects something a studio rule should have caught (she restates a rule, a known trap bites again, or the workflow itself got in the way), log it once: `bash <studio>/scripts/feedback.sh "<chat>" "<skill>" "<what happened>" "<rule to add or change>"`. One short line per field, no confidential details. The Studio skills workshop chat turns these into skill updates.
 
 ## Design and copy
 
