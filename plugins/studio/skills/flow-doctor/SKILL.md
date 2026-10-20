@@ -44,6 +44,7 @@ For a bigger change, offer a small HTML flow diagram she can scroll through.
 - Smallest change that removes the cause. Selectors by role and visible text before brittle CSS paths.
 - Every step idempotent: rerunning never applies twice or adds duplicate rows.
 - Log every action with a reason, so the Sheet explains itself.
+- Every Sheet value is plain words she can read cold. Say exactly what went out ("Resume PDF, no note") or "None"; never imply a note, message or file was sent when it was not. No internal codes or version tags (site-v1, note-v1). Times in IST, written as real date values the Sheet can sort, not UTC text.
 - Cover notes and answers that describe her work go through `truth.md`.
 
 ## 5. Verify

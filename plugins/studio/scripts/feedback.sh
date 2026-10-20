@@ -29,7 +29,7 @@ if not p.exists():
         "# Studio feedback\n\n"
         "Rows the studio skills add when Sejal corrects something a studio rule should have caught. "
         "The Studio skills workshop chat turns them into rule changes and moves them to Done.\n\n"
-        f"## Open\n\n{header}\n\n## Done\n\n{header}\n"
+        f"## Open\n\n{header}\n\n## Done\n\n| Date | Chat | Skill | What happened | Suggested rule | Resolution |\n|---|---|---|---|---|---|\n"
     )
 text = p.read_text()
 anchor = text.index(header, text.index("## Open")) + len(header)
