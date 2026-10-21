@@ -6,6 +6,7 @@ Rows the studio skills add when Sejal corrects something a studio rule should ha
 
 | Date | Chat | Skill | What happened | Suggested rule |
 |---|---|---|---|---|
+| 2026-10-20 | portfolio code | code-doctor | Asked Sejal to enable Vercel Analytics without giving the direct link or click steps; she had to ask | Any step Sejal must do outside the chat comes with the exact link and numbered clicks in the same message |
 
 ## Done
 
