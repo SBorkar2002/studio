@@ -11,6 +11,7 @@ node "<studio>/scripts/sweep.mjs" --url <preview or local url> --paths /,/work/<
 - Four phones (iPhone 13, Pixel 7, iPhone SE, iPhone 15 Pro Max) in light and dark, scrolled by touch.
 - Finds: page wider than the screen, scroll jumping back, console errors, floating layers (mascot, speech bubbles, toasts, sticky tabs) covering a photo, heading or button, and floating layers cut off at the screen edge. Layers that sit underneath (for example a bubble scrolled behind the sticky nav) are not counted.
 - A repo can describe its own floaters and pages in `.studio/sweep.json` (keys: `themeKey`, `paths`, `floaters`, `protect`, `ignore`, `allowCrop`). For the portfolio: the cat canvas and its bubble are floaters; running, walking and falling cats may be cropped.
+- It is slow on purpose: about 25 minutes for 9 pages x 4 phones x 2 themes, with almost no CPU while pages settle. Run it in the background and never kill it early; narrow it with `--paths` and `--devices` when only one page changed.
 - Every finding comes with a screenshot. Fix, then rerun until clean, and say which findings were accepted on purpose.
 - Run it on every round that touched layout, motion, a floating element or a new page, and always before asking her to review a preview.
 

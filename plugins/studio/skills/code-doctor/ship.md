@@ -27,6 +27,16 @@ Run before asking her to review a preview, and again before `main` where noted.
 - Reduced motion on: nothing essential is lost, nothing stuck mid-animation.
 - Keyboard: every control reachable with Tab, a visible focus ring, Esc closes overlays.
 
+## Reading the live site after a push
+
+Production can lag the push by a minute or more. Before opening the live site, confirm the production deployment for the pushed commit has finished:
+
+```bash
+gh api "repos/<owner>/<repo>/deployments?sha=<sha>&environment=Production" --jq '.[0].statuses_url' | xargs gh api --jq '.[0].state'
+```
+
+Wait for `success`. A 404 or old content before that is an unfinished build, not a bug.
+
 ## Status block (end of every report)
 
 ```

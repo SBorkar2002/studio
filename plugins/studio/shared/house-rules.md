@@ -14,6 +14,9 @@ Also read `private.local.md` in this folder if it exists. It holds confidential 
 - **Tokens are budgeted.** When she gives a budget or says "conserve", estimate each item, do only what fits, and list the rest as deferred.
 - **One tracker.** Update the project's tracker (TIMELINE.md or the README status section). Do not create new status files.
 - **Never claim done without proof.** See `verify.md`. "I could not watch it" is a defect to fix, not a footnote.
+- **Steps outside the chat come ready to click.** Anything she must do herself (a setting, a login, a deploy button) comes with the exact link and numbered clicks in the same message, one step at a time if there are several.
+- **No claude.ai artifacts unless she asks for one.** She switches Claude accounts, so artifacts get lost. Reports, stats and dashboards go on her own site at a stable URL, or into a file in one of her repos (Markdown renders on GitHub from any device), and you give her the path or link.
+- **Long jobs run in the background.** Sweeps, builds and big renders can take many minutes with no output (a 9-page phone sweep takes about 25 minutes at near-zero CPU). That is not a hang: never kill them early; say what is running and how long it usually takes.
 - **Feed the skills.** When she corrects something a studio rule should have caught (she restates a rule, a known trap bites again, or the workflow itself got in the way), log it once: `bash <studio>/scripts/feedback.sh "<chat>" "<skill>" "<what happened>" "<rule to add or change>"`. One short line per field, no confidential details. The Studio skills workshop chat turns these into skill updates.
 
 ## Design and copy
@@ -38,5 +41,6 @@ Also read `private.local.md` in this folder if it exists. It holds confidential 
 
 - Conventional Commits. No em dashes in messages.
 - Work on a branch, ship to a preview, merge to `main` only on her explicit OK, fast-forward only.
+- Shell scripts: never name a variable `path` in zsh (it overwrites `PATH` and breaks every command after it); use `p` or `page_path`.
 - Never force-push. Never touch the `old-portfolio` branch or `old-portfolio-final` tag.
 - PRs may be opened without asking; never merged.

@@ -20,6 +20,8 @@ hooks/    block force-push and old-portfolio edits, flag em dashes as they are w
 
 Any doctor can call another (`studio:figma-doctor`, `studio:code-doctor`, `studio:flow-doctor`) or hand an item to another chat (see `shared/handoff.md`).
 
+**Checkups:** `docs/skills-checkup.md` compares each skill's current steps with proposed ones, as flowcharts.
+
 ## Install
 
 ```bash

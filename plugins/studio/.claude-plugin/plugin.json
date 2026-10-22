@@ -1,7 +1,7 @@
 {
   "name": "studio",
   "description": "Sejal's studio: /studio routes to code-doctor, figma-doctor or flow-doctor, which share house rules, a truth check, a taste gate and proof scripts.",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "author": {
     "name": "Sejal Borkar"
   },
