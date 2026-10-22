@@ -16,14 +16,18 @@ fi
 if [ -d "$root/apps-script" ] || ls "$root"/*.gs >/dev/null 2>&1 || grep -qiE 'job hunt|automation|apps script' "$root/README.md" 2>/dev/null; then
   kind=automation; reasons+=("automation repo markers in $root")
 fi
+if [ -f "$root/LINKEDIN-TRACKER.md" ] || [ -f "$dir/LINKEDIN-TRACKER.md" ] || printf '%s' "$msg" | grep -qiE 'linkedin'; then
+  [ "$kind" = unknown ] && kind=profile || kind="$kind+profile"
+  reasons+=("LinkedIn profile work")
+fi
 if printf '%s' "$msg" | grep -qiE 'figma\.com/(design|file|proto)|node-id='; then
   [ "$kind" = unknown ] && kind=figma || kind="$kind+figma"
   reasons+=("Figma link in message")
 fi
 
 tracker=""
-for p in "$root/TIMELINE.md" "$root/README.md" "$HOME/Documents/career/portfolio-pixel/TIMELINE.md"; do
-  if [ -f "$p" ] && grep -qiE '^#+ *(status|done|left|timeline|chats)' "$p"; then tracker="$p"; break; fi
+for p in "$root/TIMELINE.md" "$root/README.md" "$root/LINKEDIN-TRACKER.md" "$HOME/Documents/career/portfolio-pixel/TIMELINE.md"; do
+  if [ -f "$p" ] && { [ "${p##*/}" = LINKEDIN-TRACKER.md ] || grep -qiE '^#+ *(status|done|left|timeline|chats)' "$p"; }; then tracker="$p"; break; fi
 done
 
 echo "kind=$kind"

@@ -15,6 +15,7 @@ Run `bash <studio>/scripts/detect.sh "<her message>"` and combine its output wit
 | `kind=code` (web app repo), or the message names pages, components, bugs on the site, deploys | `studio:code-doctor` |
 | Figma link or node id in the message, or the message is about frames, prototypes, style tiles, resume layout | `studio:figma-doctor` |
 | `kind=automation`, or the message is about scripts, the Sheet, applying, job sources | `studio:flow-doctor` |
+| `kind=profile`, or the message is about her LinkedIn profile ("we're covering item N") | `studio:profile-doctor` |
 | Mixed | Split by item (step 2) |
 | No signal | Ask one question: which project and where it lives |
 
@@ -39,7 +40,7 @@ P3  [cat]    → cat chat (hand-off)
 
 ## 3. Route
 
-- Load the doctor for the items in this chat and follow its steps. It loads the shared rules, the taste gate and the truth check as needed.
+- Load the doctor for the items in this chat and follow its steps. If a doctor's skill is not registered in this chat yet (a newly added one), read `<studio>/skills/<doctor>/steps.md` directly and follow it; it works the same. It loads the shared rules, the taste gate and the truth check as needed.
 - Items for another chat: send them through `<studio>/shared/handoff.md` and note them in the tracker.
 - Independent items can run in parallel subagents. Use a cheaper model for read-only work (audits, research, screenshots), keep design and fixing in this session, and never let two helpers write the same files.
 - A doctor can call another mid-item (for example code-doctor calling figma-doctor to update the frame it just matched). Finish the hand-off, then return to the checklist.
