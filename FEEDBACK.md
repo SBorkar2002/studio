@@ -6,6 +6,7 @@ Rows the studio skills add when Sejal corrects something a studio rule should ha
 
 | Date | Chat | Skill | What happened | Suggested rule |
 |---|---|---|---|---|
+| 2026-10-23 | code | code-doctor | Behance exports were screenshots of the portfolio pages, so every project looked the same (the portfolio's pixel chrome). | Behance case studies get their own visual identity from each project's real brand and product (taste gate rule 4). Style tile per project first, her pick, then the full boards. Never reuse the portfolio chrome for external platforms. |
 
 ## Done
 
