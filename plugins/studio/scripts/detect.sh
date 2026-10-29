@@ -26,7 +26,7 @@ if printf '%s' "$msg" | grep -qiE 'figma\.com/(design|file|proto)|node-id='; the
 fi
 
 tracker=""
-for p in "$root/TIMELINE.md" "$root/README.md" "$root/LINKEDIN-TRACKER.md" "$HOME/Documents/career/portfolio-pixel/TIMELINE.md"; do
+for p in "$root/TIMELINE.md" "$root/README.md" "$root/LINKEDIN-TRACKER.md" "$HOME/Documents/Personal/career/portfolio-pixel/TIMELINE.md"; do
   if [ -f "$p" ] && { [ "${p##*/}" = LINKEDIN-TRACKER.md ] || grep -qiE '^#+ *(status|done|left|timeline|chats)' "$p"; }; then tracker="$p"; break; fi
 done
 

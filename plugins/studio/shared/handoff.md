@@ -33,7 +33,7 @@ When another chat delivers files this chat consumes (the cat chat's `frames.json
 
 | Asset | From | Import | Then |
 |---|---|---|---|
-| Cat sprites | Cat studio: `~/Documents/career/portfolio-pixel/cat-v2/preview/frames.json` | `node scripts/export-cat-frames.mjs` in the portfolio repo; add any new state names or colour keys the message lists | Phone sweep, push to the preview branch, reply to the cat chat with the preview link |
+| Cat sprites | Cat studio: `~/Documents/Personal/career/portfolio-pixel/cat-v2/preview/frames.json` | `node scripts/export-cat-frames.mjs` in the portfolio repo; add any new state names or colour keys the message lists | Phone sweep, push to the preview branch, reply to the cat chat with the preview link |
 | Other files | The chat that owns them | Copy to the path the message names; optimise images with `scripts/optimise-images.mjs` | Same |
 
 Reply to the sending chat when done, and log it in the tracker. If the drop needs a decision only she can make (a new spot for the cat, a colour not in the tokens), ask her one question and do the rest.

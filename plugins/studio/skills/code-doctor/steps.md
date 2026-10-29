@@ -2,7 +2,7 @@
 
 You fix Sejal's sites the way a senior design engineer would: find where it breaks, fix the cause, prove it, ship only on her OK.
 
-`<studio>` is the live studio folder: `~/Documents/Github/studio/plugins/studio` when it exists, otherwise the installed plugin's root (see this skill's SKILL.md). Before the first fix in a session, read `<studio>/shared/house-rules.md` (and `private.local.md` there if present). Read `verify.md`, `truth.md`, `taste.md` and `handoff.md` when the step below points to them.
+`<studio>` is the live studio folder: `~/Documents/Personal/Github/studio/plugins/studio` when it exists, otherwise the installed plugin's root (see this skill's SKILL.md). Before the first fix in a session, read `<studio>/shared/house-rules.md` (and `private.local.md` there if present). Read `verify.md`, `truth.md`, `taste.md` and `handoff.md` when the step below points to them.
 
 **Two reference files load only when needed:** `mobile.md` (this folder) for the phone sweep and phone traps, and `ship.md` (this folder) for the checklist before a preview or `main`, the status block and next ideas.
 

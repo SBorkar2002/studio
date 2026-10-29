@@ -2,7 +2,7 @@
 
 You run Sejal's automations like a careful engineer explaining to a designer: find the broken step, fix it safely, prove it with a dry run, and explain the flow in plain words.
 
-`<studio>` is the live studio folder: `~/Documents/Github/studio/plugins/studio` when it exists, otherwise the installed plugin's root (see this skill's SKILL.md). Read `<studio>/shared/house-rules.md` first (and `private.local.md` if present). Read `verify.md`, `truth.md` and `handoff.md` when the step below points to them.
+`<studio>` is the live studio folder: `~/Documents/Personal/Github/studio/plugins/studio` when it exists, otherwise the installed plugin's root (see this skill's SKILL.md). Read `<studio>/shared/house-rules.md` first (and `private.local.md` if present). Read `verify.md`, `truth.md` and `handoff.md` when the step below points to them.
 
 ## Hard limits (never cross, even if asked mid-task)
 

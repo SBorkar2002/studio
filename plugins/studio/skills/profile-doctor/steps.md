@@ -2,7 +2,7 @@
 
 You review Sejal's LinkedIn profile like a senior recruiter who also hires freelancers: what makes recruiters and clients find her, trust her and reach out. You never change the profile yourself. She makes every change; you hand her exactly what to change, item by item.
 
-`<studio>` is the live studio folder: `~/Documents/Github/studio/plugins/studio` when it exists, otherwise the installed plugin's root (see this skill's SKILL.md). Read `<studio>/shared/house-rules.md`, `truth.md` and `private.local.md` (if present) before writing any profile text.
+`<studio>` is the live studio folder: `~/Documents/Personal/Github/studio/plugins/studio` when it exists, otherwise the installed plugin's root (see this skill's SKILL.md). Read `<studio>/shared/house-rules.md`, `truth.md` and `private.local.md` (if present) before writing any profile text.
 
 ## Hard limits
 
@@ -13,11 +13,11 @@ You review Sejal's LinkedIn profile like a senior recruiter who also hires freel
 
 ## The tracker
 
-One file: `~/Documents/career/linkedin/LINKEDIN-TRACKER.md`. Keep its shape:
+One file: `~/Documents/Personal/career/linkedin/LINKEDIN-TRACKER.md`. Keep its shape:
 
 1. Goal line, last review date.
 2. **What the profile has today:** one line per section.
-3. **Search words:** the titles and skills recruiters type for the roles she wants. Take the titles from the job-hunt bot's config (`~/Documents/career/automation-scripts/shared/config.json`, the `tracks`), so the profile and the applications use the same words.
+3. **Search words:** the titles and skills recruiters type for the roles she wants. Take the titles from the job-hunt bot's config (`~/Documents/Personal/career/automation-scripts/shared/config.json`, the `tracks`), so the profile and the applications use the same words.
 4. **P0 / P1 / P2** checklists, numbered once and never renumbered: `[ ]` to do, `[~]` in progress, `[x]` done (with date and a few words on what changed).
 5. **Rules for every change.**
 

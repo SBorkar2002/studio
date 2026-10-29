@@ -2,7 +2,7 @@
 # Logs one piece of skill feedback for the Studio skills workshop chat.
 # Usage: feedback.sh "<chat>" "<skill>" "<what happened>" "<rule to add or change>"
 # Writes a row under "## Open" in FEEDBACK.md of the studio repo
-# (STUDIO_REPO, default ~/Documents/Github/studio). No confidential details.
+# (STUDIO_REPO, default ~/Documents/Personal/Github/studio). No confidential details.
 
 set -euo pipefail
 if [ $# -lt 4 ]; then
@@ -10,7 +10,7 @@ if [ $# -lt 4 ]; then
   exit 1
 fi
 
-repo="${STUDIO_REPO:-$HOME/Documents/Github/studio}"
+repo="${STUDIO_REPO:-$HOME/Documents/Personal/Github/studio}"
 [ -d "$repo" ] || repo="$HOME/.claude"
 file="$repo/FEEDBACK.md"
 

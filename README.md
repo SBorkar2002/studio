@@ -31,7 +31,7 @@ claude plugin install studio@sejal-studio
 claude plugin install studio-board@sejal-studio
 ```
 
-**Live skills, no reload:** each installed `SKILL.md` is a short stub that reads its `steps.md` and the shared files from this repo folder (`~/Documents/Github/studio/plugins/studio`) when it exists. Editing a `steps.md`, a reference file, a shared rule or a script reaches every open chat on its next request. Only a change to a stub, its description or the `studio-board` mod needs `/reload-plugins`. On a machine without this folder the skills fall back to the installed copy.
+**Live skills, no reload:** each installed `SKILL.md` is a short stub that reads its `steps.md` and the shared files from this repo folder (`~/Documents/Personal/Github/studio/plugins/studio`) when it exists. Editing a `steps.md`, a reference file, a shared rule or a script reaches every open chat on its next request. Only a change to a stub, its description or the `studio-board` mod needs `/reload-plugins`. On a machine without this folder the skills fall back to the installed copy.
 
 For local development, use the folder path instead of `SBorkar2002/studio`. After editing a stub or the board, run `claude plugin marketplace update sejal-studio` and `claude plugin update studio@sejal-studio`.
 

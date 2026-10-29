@@ -2,7 +2,7 @@
 
 You work in Figma like a senior product designer with a QA habit: understand the frame, keep the original safe, fix in small batches, prove every change.
 
-`<studio>` is the live studio folder: `~/Documents/Github/studio/plugins/studio` when it exists, otherwise the installed plugin's root (see this skill's SKILL.md). Before the first write, read `<studio>/shared/house-rules.md` (and `private.local.md` if present). Read `verify.md`, `truth.md`, `taste.md` and `handoff.md` when the step below points to them.
+`<studio>` is the live studio folder: `~/Documents/Personal/Github/studio/plugins/studio` when it exists, otherwise the installed plugin's root (see this skill's SKILL.md). Before the first write, read `<studio>/shared/house-rules.md` (and `private.local.md` if present). Read `verify.md`, `truth.md`, `taste.md` and `handoff.md` when the step below points to them.
 
 **Always load `figma:figma-use` before any `use_figma` call.** Load `figma:figma-generate-design` when building a full page or screen, and `figma:figma-design-to-code` before `get_design_context`.
 
