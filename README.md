@@ -9,7 +9,7 @@ Sejal's personal Claude Code plugin. Type `/studio` in any chat with a change li
   ├─ flow-doctor    automation: dry run first, hard safety limits, plain-language flow
   └─ profile-doctor LinkedIn: read-only review, P0 to P2 tracker, exact text per item
 shared/   house-rules · verify · truth · taste · handoff · private.local (git-ignored)
-scripts/  detect.sh · shots.mjs · sweep.mjs · shotdiff.mjs · copy-lint.py · figma-qa.js · feedback.sh
+scripts/  detect.sh · setup-check.sh · shots.mjs · sweep.mjs · shotdiff.mjs · copy-lint.py · figma-qa.js · feedback.sh
 hooks/    block force-push and old-portfolio edits, flag em dashes as they are written
 ```
 
@@ -17,11 +17,13 @@ hooks/    block force-push and old-portfolio edits, flag em dashes as they are w
 
 **Studio mode:** once any studio skill runs in a chat, every later message in that chat is treated as a studio request, so the command is typed once per chat. It survives an app restart. `/studio-off` turns it off, `/studio-on` turns it back on, and the panel has the same switch.
 
-**Skill feedback:** when Sejal corrects something a studio rule should have caught, the skill logs it with `scripts/feedback.sh` into `FEEDBACK.md`. The Studio skills workshop chat reads it and updates the skills.
+**Skill feedback:** when Sejal corrects something a studio rule should have caught, the skill logs it with `scripts/feedback.sh` into `FEEDBACK.md`. The Studio chat reads it and updates the skills.
 
 Any doctor can call another (`studio:figma-doctor`, `studio:code-doctor`, `studio:flow-doctor`) or hand an item to another chat (see `shared/handoff.md`).
 
-**Checkups:** `docs/skills-checkup.md` compares each skill's current steps with proposed ones, as flowcharts.
+**Checkups:** `docs/skills-checkup.md` compares each skill's current steps with proposed ones, as flowcharts. P1 to P17 are live since studio 0.4.0.
+
+**Setup check:** `scripts/setup-check.sh` lists what this Mac is missing (Playwright, Chrome, Python, `private.local.md`). `detect.sh` prints its result on its last line, so every doctor sees it at intake.
 
 ## Install
 

@@ -1,6 +1,6 @@
 ---
 name: studio
-description: Sejal's single entry point for any change request in her personal projects (portfolio site, Figma frames, case studies, take-homes, job-hunt automation). Detects which chat and project this is, splits her note into a prioritized checklist, routes each item to code-doctor, figma-doctor or flow-doctor, and returns one verified report. Use whenever she types /studio or sends a change list, bug list or revision round.
+description: Sejal's single entry point for any change request in her personal projects (portfolio site, Figma frames, case studies, take-homes, job-hunt automation, LinkedIn profile). Detects which chat and project this is, splits her note into a prioritized checklist, routes each item to code-doctor, figma-doctor, flow-doctor or profile-doctor, and returns one verified report. Use whenever she types /studio or sends a change list, bug list or revision round.
 ---
 
 # Studio

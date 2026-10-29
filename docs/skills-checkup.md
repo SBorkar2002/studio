@@ -9,7 +9,9 @@ A full pass over every studio skill (studio, code-doctor, figma-doctor, flow-doc
 - Amber: proposed change to an existing step
 - Green: proposed new step
 
-Proposals are numbered **P1 to P12** so you can answer by number. Nothing marked amber or green is live yet.
+Proposals are numbered **P1 to P12** so you can answer by number.
+
+**Status 30 Oct 2026:** Sejal approved all of P1 to P17 (P13 to P17 are in section 6 below). All are live in studio 0.4.0. The figma-doctor P8 step also checks whether a file still sits in the Epifi account.
 
 ## Already done today
 
@@ -203,6 +205,16 @@ flowchart LR
 | `taste.md` | Unused so far | No style gate has run since it was written; it stays as is |
 | `handoff.md` | Good | Asset drops and feedback sections added on 20 Oct |
 | `FEEDBACK.md` | All closed | 4 rows, all turned into rules |
+
+## 6. Added 30 Oct 2026 (after the laptop reset)
+
+| # | Skill | Proposal | Why (evidence) |
+|---|---|---|---|
+| P13 | studio | **Setup check.** `scripts/setup-check.sh` (run by `detect.sh`) reports missing Playwright, Chrome, Python or `private.local.md`; the router also checks Figma sign-in and gives the fix | After the reset, Playwright and `private.local.md` were missing and nothing said so: screenshot proof and the banned-string check were silently off |
+| P14 | studio | **Hub sync in the report.** After shipping, update this chat's section of claude-brain `projects/hub.md` and message the Hub one line; read the Inbox at Read the room | The Hub and its linked chats sync through hub.md, but no skill step did it |
+| P15 | code-doctor | **Off-site work gets its own identity.** Behance, Dribbble, PDFs and decks run the taste gate per project, never portfolio screenshots | The open FEEDBACK row from 23 Oct |
+| P16 | profile-doctor | **Sync check first.** Compare site commits, `career.md`, bot `tracks` and hub.md since the last review; mismatches become tracker items | The profile drifts whenever the resume, site or bot titles change |
+| P17 | profile-doctor | **Post drafts.** Offer one LinkedIn post draft when work ships; she posts | The posting plan is an open LinkedIn tracker item |
 
 ## How to answer
 

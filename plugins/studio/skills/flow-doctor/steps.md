@@ -60,3 +60,13 @@ Follow `verify.md` (automation section): dry run with log lines as proof, then o
 
 - Update the README Status (done, decided, next, left).
 - Reply in about 5 lines in plain language: what broke, what changed, what was proven, what she must do (a login, a decision), the next run time, the next source or step.
+- If the README Status has no "Outcomes" line from the last 7 days, offer the weekly outcomes check (step 7) in one line.
+
+## 7. Weekly outcomes (once a week, or when she asks)
+
+The bot applies, but nothing tells it which roles and sites reply. This step closes that loop.
+
+1. **Read the results.** Read the Sheet's Status and Response columns through the repo's Apps Script web app (`shared/sheet.mjs`). If it has no read-only action for this, add one through the normal Fix and Verify steps; until then ask her for a CSV (in the Sheet: File > Download > Comma-separated values) and read that.
+2. **Count, per site and per title track** (the `tracks` in `shared/config.json`): applied, replies, interviews, rejections, and no reply after 14 days. Write the table to an "Outcomes" tab (week, site, track, the five counts), adding one block per week, never overwriting old weeks. Plain words and IST dates, as for every Sheet value.
+3. **Suggest filter changes, never apply them.** From the counts, propose at most 3 changes, each with its evidence: drop or narrow a track with many applies and no replies, widen one that gets replies, lower a site's cap if it only brings rejections, raise one that works. A change to `config.json` happens only on her yes, through the normal Fix and Verify steps.
+4. Add an "Outcomes <date>: <one line>" entry to the README Status. Sample sizes under about 10 applies per row are noise: say so instead of drawing a conclusion.

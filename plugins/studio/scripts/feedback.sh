@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Logs one piece of skill feedback for the Studio skills workshop chat.
+# Logs one piece of skill feedback for the Studio chat.
 # Usage: feedback.sh "<chat>" "<skill>" "<what happened>" "<rule to add or change>"
 # Writes a row under "## Open" in FEEDBACK.md of the studio repo
 # (STUDIO_REPO, default ~/Documents/Personal/Github/studio). No confidential details.
@@ -28,7 +28,7 @@ if not p.exists():
     p.write_text(
         "# Studio feedback\n\n"
         "Rows the studio skills add when Sejal corrects something a studio rule should have caught. "
-        "The Studio skills workshop chat turns them into rule changes and moves them to Done.\n\n"
+        "The Studio chat turns them into rule changes and moves them to Done.\n\n"
         f"## Open\n\n{header}\n\n## Done\n\n| Date | Chat | Skill | What happened | Suggested rule | Resolution |\n|---|---|---|---|---|---|\n"
     )
 text = p.read_text()

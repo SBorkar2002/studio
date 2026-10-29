@@ -41,3 +41,4 @@ fi
 echo "tracker=${tracker:-none}"
 [ -f "$root/.claude/launch.json" ] && echo "launch=$(grep -oE '"name": *"[^"]+"' "$root/.claude/launch.json" | head -1 | sed 's/.*: *//')"
 printf 'why=%s\n' "${reasons[*]:-no strong signal: ask or infer from the message}"
+bash "$(dirname "$0")/setup-check.sh" --quiet

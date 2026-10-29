@@ -7,7 +7,7 @@ Use this when the question is **what it should look like**, not how to build it:
 1. **References that get used.** Collect at most 8. For each, write one line: what to steal and which section it goes to. A reference that maps to nothing is dropped. Flag paid or unlicensed sources before using them.
 2. **One style tile first.** Palette, type pair, one component, one motion idea, one real content block. In Figma or a single HTML page. Offer 2 or 3 only when the direction is genuinely open.
 3. **Her pick, then tokens.** Lock colours, type scale, spacing and radii as tokens. Nothing past the tile is built before she approves it.
-4. **Distinct register.** Each project gets its own voice tied to what the product means (Sourced = night gallery, Green Gallery = cute and bubbly, portfolio = pixel chrome with HD work). Check it does not look like her other projects.
+4. **Distinct register.** Each project gets its own voice tied to what the product means (Sourced = night gallery, Green Gallery = cute and bubbly, portfolio = pixel chrome with HD work). Check it does not look like her other projects. Work shown outside her site (Behance, Dribbble, PDFs, decks) takes the project's own identity, never screenshots of the portfolio's pixel chrome: one style tile per project, her pick, then the full boards.
 
 ## AI-generic ban list
 

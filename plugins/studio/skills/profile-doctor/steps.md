@@ -20,8 +20,20 @@ One file: `~/Documents/Personal/career/linkedin/LINKEDIN-TRACKER.md`. Keep its s
 3. **Search words:** the titles and skills recruiters type for the roles she wants. Take the titles from the job-hunt bot's config (`~/Documents/Personal/career/automation-scripts/shared/config.json`, the `tracks`), so the profile and the applications use the same words.
 4. **P0 / P1 / P2** checklists, numbered once and never renumbered: `[ ]` to do, `[~]` in progress, `[x]` done (with date and a few words on what changed).
 5. **Rules for every change.**
+6. **Post drafts:** drafts waiting for her, and what she posted (date, topic, link).
 
 Never create a second tracker or a separate notes file.
+
+## 0. Sync check (every time, before step 1 or 2)
+
+The profile must say the same thing as her resume, her site and the job bot. Check what changed since the tracker's last review date:
+
+- **Site:** `git -C ~/Documents/Personal/Github/my-portfolio log --since=<last review date> --oneline` (new case studies, changed titles or claims).
+- **Resume and positioning:** claude-brain `projects/career.md` (its dated lines since the last review).
+- **Bot titles:** the `tracks` in `~/Documents/Personal/career/automation-scripts/shared/config.json` against the tracker's Search words.
+- **Hub:** the Portfolio and Automation sections of `~/Documents/Personal/Github/claude-brain/projects/hub.md` (Latest lines since the last review).
+
+Each mismatch becomes a tracker item (P0 when it is a title, date or claim that now disagrees; P1 otherwise). Say in one line what changed, or "in sync".
 
 ## 1. Full review (first time, or when she says "review again")
 
@@ -58,6 +70,15 @@ Before sending any text: run `python3 <studio>/scripts/copy-lint.py --text "<dra
 - Update the matching line in "What the profile has today".
 - Suggest the next item: the highest open P0, unless she picks another.
 
-## 4. Report
+## 4. Post drafts (when something ships, or she asks)
+
+When the sync check finds shipped work (a new case study, a live feature, a finished video or comic), offer one LinkedIn post draft. You never post; she does.
+
+- **Shape:** a first line that makes a designer or recruiter stop (no "Excited to share"), what she made and the one decision behind it, one result she can defend, the link. About 120 to 200 words. One image spec (what it shows, 1200 x 1500 px portrait or 1200 x 627 px for a link post).
+- **Truth:** every claim passes `truth.md`; nothing from `private.local.md`; credit Claude only for what Claude did if she mentions it.
+- Run `python3 <studio>/scripts/copy-lint.py --text "<draft>"` and fix every hit.
+- Save the draft under "Post drafts" in the tracker; when she says it is posted, move it to posted with the date and link.
+
+## 5. Report
 
 About 3 lines: what was covered, what she still has to do for it (if anything), the next item and how many are left per priority.

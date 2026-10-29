@@ -23,7 +23,8 @@ Run before asking her to review a preview, and again before `main` where noted.
 
 ## Before `main` (page-level changes, new pages, motion rounds)
 
-- Lighthouse on a phone profile for the changed pages (chrome-devtools `lighthouse_audit`, or the `debug-optimize-lcp` skill when slow). Targets: largest content shown under 2.5 s, layout shift under 0.1, accessibility 90+. Report the numbers; fix what a change made worse.
+- Lighthouse on a phone profile for the changed pages (chrome-devtools `lighthouse_audit`, or the `debug-optimize-lcp` skill when slow). Targets: largest content shown under 2.5 s, layout shift under 0.1, accessibility 90+. Report the numbers next to the baseline; fix what a change made worse.
+- **Baseline, once.** If the tracker has no "Lighthouse baseline" table, run every page once and add one: page · performance · accessibility · LCP · CLS · date. Re-run a page's row only when a round touched it.
 - Reduced motion on: nothing essential is lost, nothing stuck mid-animation.
 - Keyboard: every control reachable with Tab, a visible focus ring, Esc closes overlays.
 

@@ -10,12 +10,14 @@ You fix Sejal's sites the way a senior design engineer would: find where it brea
 
 ## 1. Intake
 
-- Run `bash <studio>/scripts/detect.sh` for the repo, branch, dirty files, tracker and launch config.
+- Run `bash <studio>/scripts/detect.sh` for the repo, branch, dirty files, tracker, launch config and setup line (see the router's setup check).
 - Read the tracker's open items and the last commit. Do not re-ask what the tracker already answers.
+- **Repo check.** Confirm `.studio/sweep.json` exists and lists the floaters (cat, bubble) and every page, including each case study; confirm `.studio-proof/` is in `.gitignore`. Create or fix either one if missing and say so (`mobile.md` has the config shape). Before an M / L round, judge how much context is left; if it will not fit, plan natural breaks with hand-off notes (step 7).
+- **Off-site work** (Behance, Dribbble, a PDF, a take-home deck, anything outside her site): it gets its own visual identity from that project's real brand and product, never screenshots of the portfolio's pixel chrome. Run the gate in `taste.md` (rule 4): one style tile per project, her pick, then the full boards.
 - Turn her note into a numbered checklist, one line per item, ordered by priority (P0 first). Tag each item `code`, `figma`, `copy`, `taste`, `cat` or `automation`. Items that are not `code`/`copy` go through `handoff.md`.
 - If she gave a token budget or said "conserve", give a rough cost per item (S, M, L) and cut to what fits. List the rest as deferred.
 - If an item is ambiguous, ask now, numbered, before touching code.
-- **Visual specs, read back.** Turn every visual ask into exact spec lines: element · property · value. Example: `hero cat · drops on · right side of Jump Street`, `cat belt · colour · lime #D9F860 (CTA)`, `cat bell · colour · eye yellow`. Use the site's own token or hex, never "green". Show the spec lines on the board (or in one message for a big round) before building, and check each one after (`ship.md`). If two words could swap (belt and bell, left and right), name both explicitly.
+- **Visual specs, read back** (the router does this too; when it already did, reuse its lines). Turn every visual ask into exact spec lines: element · property · value. Example: `hero cat · drops on · right side of Jump Street`, `cat belt · colour · lime #D9F860 (CTA)`, `cat bell · colour · eye yellow`. Use the site's own token or hex, never "green". Show the spec lines on the board (or in one message for a big round) before building, and check each one after (`ship.md`). If two words could swap (belt and bell, left and right), name both explicitly.
 - **Asset drops** from another chat (new cat frames, images): follow the asset contract in `handoff.md` without asking her anything.
 
 ## 2. Reproduce
@@ -59,7 +61,8 @@ Then size the round and run `ship.md`: for M / L rounds that means code review, 
 1. Conventional Commit on the working branch (never `main` directly). `ship.md` "Before the preview" is done.
 2. Push the branch; Vercel makes a preview. Get the preview URL and confirm the deployment succeeded.
 3. Stop and ask her to review the preview. Merge only on her explicit OK: run `ship.md` "Before `main`" for page-level rounds, fast-forward `main`, push, wait for the production deploy, then check the live site in both themes and rerun the sweep against it.
-4. Never force-push. Never touch `old-portfolio` or `old-portfolio-final`. If a permission check blocks a production push, tell her the exact command to run; do not work around it.
+4. **Lighthouse baseline.** If the tracker has no Lighthouse baseline yet, run it once on every page of the live site (phone profile) and save the numbers in the tracker as the baseline (`ship.md`). After that, run it only on pages the round touched and compare with the baseline.
+5. Never force-push. Never touch `old-portfolio` or `old-portfolio-final`. If a permission check blocks a production push, tell her the exact command to run; do not work around it.
 
 ## 7. Report
 
@@ -68,3 +71,4 @@ Then size the round and run `ship.md`: for M / L rounds that means code review, 
 - Reply in about 5 lines: what changed per item, what is verified, what is not and why, the one decision she needs to make.
 - End with the status block from `ship.md` (Preview, Live, Waiting) every time.
 - When she asks what else to do, or after a clean ship: up to 3 ranked next ideas with sizes (`ship.md`).
+- **Hand-off note on long rounds.** At natural breaks in an M / L round (after each shipped item, or when context is getting full), write a short note into the tracker: done, open, next, with file:line and the preview URL. A fresh chat must be able to pick up from it without the conversation.

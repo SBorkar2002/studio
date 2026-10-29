@@ -1,6 +1,6 @@
 # Hand-offs between doctors
 
-The three doctors are one team. Any of them can pull in another when the problem crosses into its area.
+The doctors are one team. Any of them can pull in another when the problem crosses into its area.
 
 | From | Problem found | Call |
 |---|---|---|
@@ -40,7 +40,7 @@ Reply to the sending chat when done, and log it in the tracker. If the drop need
 
 ## Skill feedback
 
-Problems with the skills themselves (a missing rule, a step that wasted time, a wrong route) are not hand-offs. Log them with `scripts/feedback.sh` (see `house-rules.md`). The Studio skills workshop chat owns the skills.
+Problems with the skills themselves (a missing rule, a step that wasted time, a wrong route) are not hand-offs. Log them with `scripts/feedback.sh` (see `house-rules.md`). The Studio chat (`Github/studio`) owns the skills.
 
 ## Rules
 
